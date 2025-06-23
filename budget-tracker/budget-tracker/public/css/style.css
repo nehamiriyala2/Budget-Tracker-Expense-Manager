@@ -1,0 +1,603 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    background-color: #f4f7fa; /* Light, neutral background */
+    color: #333; /* Darker text for readability */
+    transition: background-color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+/* Dark Mode (optional, toggle via JS) */
+body.dark-mode {
+    background-color: #1a1f2b;
+    color: #e0e0e0;
+}
+
+/* Header/Navbar */
+.navbar {
+    background: linear-gradient(135deg, #ffffff, #e9ecef); /* Subtle gradient */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #0056b3;
+}
+
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {/* Global Styles */
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f4f7fa;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* Dark Mode (Optional) */
+    body.dark-mode {
+        background-color: #1a1f2b;
+        color: #e0e0e0;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #2c3e50;
+        font-weight: 600;
+    }
+    
+    /* Navbar (All Pages) */
+    .navbar {
+        background: linear-gradient(135deg, #ffffff, #e9ecef);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #007bff;
+        transition: color 0.3s ease;
+    }
+    
+    .navbar-brand:hover {
+        color: #0056b3;
+    }
+    
+    .nav-link {
+        color: #495057;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-link:hover {
+        color: #007bff;
+    }
+    
+    .btn-outline-primary {
+        border-color: #007bff;
+        color: #007bff;
+        padding: 0.5rem 1.2rem;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: #fff;
+        transform: scale(1.05);
+    }
+    
+    .btn-primary {
+        background: linear-gradient(45deg, #007bff, #00d4ff);
+        border: none;
+        padding: 0.6rem 1.5rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+        background: linear-gradient(45deg, #0056b3, #00b7eb);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(0, 91, 255, 0.3);
+    }
+    
+    /* Cards (All Pages) */
+    .card {
+        border: none;
+        border-radius: 12px;
+        background-color: #fff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+        color: #2c3e50;
+        margin-bottom: 0.75rem;
+    }
+    
+    .card-text {
+        color: #6c757d;
+        font-size: 1rem;
+    }
+    
+    /* Tables (dashboard.php, transactions.php, budgets.php, reports.php) */
+    .table {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        margin-bottom: 0;
+    }
+    
+    .table thead th {
+        background: linear-gradient(45deg, #007bff, #00d4ff);
+        color: #fff;
+        font-weight: 500;
+        padding: 1rem;
+    }
+    
+    .table tbody tr {
+        transition: background-color 0.2s ease;
+    }
+    
+    .table tbody tr:hover {
+        background-color: #f1f3f5;
+    }
+    
+    .table td, .table th {
+        padding: 0.9rem;
+    }
+    
+    /* Forms (login.php, register.php, transactions.php, budgets.php) */
+    .form-control {
+        border-radius: 8px;
+        border: 1px solid #ced4da;
+        padding: 0.75rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+        outline: none;
+    }
+    
+    .form-select {
+        border-radius: 8px;
+        padding: 0.75rem;
+    }
+    
+    /* Page-Specific Styles */
+    
+    /* Index Page */
+    .display-4 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        animation: fadeInDown 1s ease-in-out;
+    }
+    
+    .lead {
+        font-size: 1.3rem;
+        color: #6c757d;
+        animation: fadeInUp 1s ease-in-out 0.3s;
+    }
+    
+    .list-group-item {
+        border: none;
+        color: #495057;
+        padding: 0.75rem 0;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .list-group-item:hover {
+        color: #007bff;
+        transform: translateX(5px);
+    }
+    
+    .btn-lg {
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+        animation: pulse 2s infinite ease-in-out;
+    }
+    
+    /* Login & Register Pages */
+    .login-card, .register-card {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    
+    .login-card .card-title, .register-card .card-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .text-danger {
+        font-size: 0.9rem;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    /* Dashboard Page */
+    .dashboard-overview .card-body p {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #007bff;
+        margin: 0;
+    }
+    
+    .dashboard-overview .card:hover p {
+        color: #0056b3;
+    }
+    
+    /* Transactions Page */
+    .transactions-form .btn-primary {
+        padding: 0.75rem;
+    }
+    
+    .transactions-table .table td {
+        vertical-align: middle;
+    }
+    
+    /* Budgets Page */
+    .budgets-form .btn-primary {
+        padding: 0.75rem;
+    }
+    
+    .budgets-table .table td {
+        vertical-align: middle;
+    }
+    
+    /* Reports Page */
+    .reports-summary .card-body p {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #007bff;
+    }
+    
+    canvas {
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+    }
+    
+    canvas:hover {
+        transform: scale(1.02);
+    }
+    
+    /* Footer */
+    footer {
+        background: linear-gradient(135deg, #e9ecef, #ffffff);
+        border-top: 1px solid #d3d9df;
+        padding: 1.5rem 0;
+        color: #6c757d;
+        font-size: 0.9rem;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    /* Animations */
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .navbar {
+            padding: 0.8rem 0;
+        }
+    
+        .navbar-nav {
+            text-align: center;
+            margin-top: 1rem;
+        }
+    
+        .display-4 {
+            font-size: 2.5rem;
+        }
+    
+        .lead {
+            font-size: 1.1rem;
+        }
+    
+        .card {
+            margin-bottom: 20px;
+        }
+    
+        .btn-lg {
+            padding: 0.6rem 1.5rem;
+            font-size: 1rem;
+        }
+    
+        .form-control, .form-select {
+            margin-bottom: 10px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .table {
+            font-size: 0.85rem;
+        }
+    
+        .table td, .table th {
+            padding: 0.6rem;
+        }
+    
+        .btn {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    
+        .navbar-brand {
+            font-size: 1.2rem;
+        }
+    }
+    background-color: #007bff;
+    color: #fff;
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #0056b3, #00b7eb);
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 4px 12px rgba(0, 91, 255, 0.3);
+}
+
+/* Hero Section (index.php) */
+.display-4 {
+    font-weight: 700;
+    color: #2c3e50; /* Darker blue-gray */
+    animation: fadeInDown 1s ease-in-out; /* Subtle entrance */
+}
+
+.lead {
+    color: #6c757d;
+    font-size: 1.3rem;
+    animation: fadeInUp 1s ease-in-out 0.3s; /* Delayed entrance */
+}
+
+/* Cards (All Pages) */
+.card {
+    border: none;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+/* Tables (dashboard.php, transactions.php, budgets.php, reports.php) */
+.table {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.table thead th {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    color: #fff;
+    font-weight: 500;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+/* Forms (login.php, register.php, transactions.php, budgets.php) */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.form-select {
+    border-radius: 8px;
+}
+
+/* Buttons (All Pages) */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-outline-danger {
+    transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #e9ecef, #ffffff);
+    border-top: 1px solid #d3d9df;
+    padding: 1.5rem 0;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Specific Page Styles */
+
+/* Index Page */
+.list-group-item {
+    border: none;
+    color: #495057;
+    padding: 0.75rem 0;
+    transition: color 0.3s ease;
+}
+
+.list-group-item:hover {
+    color: #007bff;
+}
+
+/* Dashboard Page */
+.card-body h5 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.card-body p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+/* Reports Page */
+canvas {
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Call-to-Action Buttons (index.php) */
+.btn-lg {
+    padding: 0.8rem 2rem;
+    animation: pulse 2s infinite ease-in-out; /* Subtle pulsing effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem 0;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+    }
+
+    .btn-lg {
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .table {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
